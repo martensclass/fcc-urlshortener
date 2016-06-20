@@ -2,7 +2,9 @@ var express = require('express');
 var app = express();
 
 var mongoose = require('mongoose');
-var url = 'mongodb://localhost:27017/data/db'; 
+//var url = 'mongodb://localhost:27017/data/db'; 
+var url = process.env.MONGOLAB_URI;
+
 mongoose.connect(url);
 
 var urlSchema = mongoose.Schema({
