@@ -25,19 +25,19 @@
         <h1>FreeCodeCamp URL Shortener</h1><hr>
         
         <h3>Usage</h3>
-        <p>Enter a valid website address at the end of this URL starting with <em>/new/http://www.</em> and the server will respond with the address and a shortcut URL for that address.  If the address does not conform to this format, the server will respond with an error.</p>
+        <p>Enter a valid website address at the end of this URL starting with <em>/new/http://www.</em> and the server will respond with the address and a 4-character shortcut URL for that address.  If the address does not conform to this format, the server will respond with an error.</p>
         
         <pre>
             https://vast-scrubland-33683.herokuapp.com/new/http://www.google.com
             
             Will procduce:
             
-            {"shortcut": https://vast-scrubland-33683.herokuapp.com/4eRp,"url":"http://www.google.com"}
+            {"shortcut":"https://vast-scrubland-33683.herokuapp.com/S3bu","url":"http://www.google.com"}
         </pre>
         
         <p>Alternatively, you can append a previously created 4-character shortcut address to the end of this url and be redirected to that address:</p>
         <pre>
-            https://vast-scrubland-33683.herokuapp.com/4eRp
+            https://vast-scrubland-33683.herokuapp.com/S3bu
         </pre>
         <p>This example will redirect you to Google.com.  If the shortcut does not exist or does not contain 4-characters, the server will respond with an error.</p>
        
