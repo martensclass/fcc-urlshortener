@@ -52,7 +52,7 @@ app.get('*', function (req, res) {
     res.json({url: "Are you looking for a shortcut?  If so, they are only 4 characters long.  If you want to make a NEW shortcut you need to start with /new/http://"});
     else{
       //look for shortcut
-      Shortcut.findOne({shortcut: "https://fcc-urlshortener-martensclass.c9users.io" + newurl},function(err,sc){
+      Shortcut.findOne({shortcut: "https://vast-scrubland-33683.herokuapp.com" + newurl},function(err,sc){
         if(err) console.log(err);
         else if(!sc){
            res.json({url: "Sorry, the shortcut " + newurl + " does not exist."});
@@ -66,11 +66,11 @@ app.get('*', function (req, res) {
   else{ //try to create a new shortcut
     if(checkurl(newurl)){
         newurl = newurl.slice(5);
-        var entry = new Shortcut({shortcut: "https://fcc-urlshortener-martensclass.c9users.io/" + something, url: newurl });
+        var entry = new Shortcut({shortcut: "https://vast-scrubland-33683.herokuapp.com/" + something, url: newurl });
         entry.save(function(err,ent){
         if(err) console.log(err);
             else{
-              res.json({shortcut: "https://fcc-urlshortener-martensclass.c9users.io/" + something, url: newurl});
+              res.json({shortcut: "https://vast-scrubland-33683.herokuapp.com/" + something, url: newurl});
            }
         });
     }
